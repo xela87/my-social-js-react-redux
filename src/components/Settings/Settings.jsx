@@ -1,7 +1,7 @@
 import React from 'react';
 // import styles from './Settings.module.css';
 
-const Settings = (): JSX.Element => {
+const Settings = () => {
   return <section>Settings</section>;
 };
 

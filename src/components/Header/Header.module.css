@@ -6,3 +6,12 @@
 .logo {
     width: 250px;
 }
+
+.loginBlock {
+    float: right;
+}
+
+.loginBlock a {
+    color: lightgray;
+    text-decoration: none;
+}

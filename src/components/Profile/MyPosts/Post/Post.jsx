@@ -1,19 +1,14 @@
 import React from 'react';
 import style from './Post.module.css';
 
-interface IPost {
-  message: string;
-  like: number;
-}
-
-const Post = ({ like, message }: IPost): JSX.Element => {
+const Post = (props) => {
   return (
     <div>
       <div className={style.item}>
         <img src="https://cencup.com/wp-content/uploads/2019/07/avatar-placeholder.png" alt="ava" />
-        {message}
+        {props.message}
         <div>
-          <span>{like}</span>
+          <span>{props.like}</span>
         </div>
       </div>
     </div>
