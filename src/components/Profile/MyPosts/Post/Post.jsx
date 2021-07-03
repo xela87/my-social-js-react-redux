@@ -5,7 +5,7 @@ const Post = (props) => {
   return (
     <div>
       <div className={style.item}>
-        <img src="https://cencup.com/wp-content/uploads/2019/07/avatar-placeholder.png" alt="ava" />
+        <img src="https://dadabazar.online/upload/users/user-avatar.png" alt="ava" />
         {props.message}
         <div>
           <span>{props.like}</span>
