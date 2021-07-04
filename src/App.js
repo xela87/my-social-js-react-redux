@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
+import Login from "./components/Login/Login";
 import UsersContainer from "./components/Users/UsersContainer";
 import MessagesContainer from "./components/Messages/MessagesContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
@@ -22,6 +23,8 @@ const App = () => {
                 <Route path="/music" render={() => <Music/>}/>
                 <Route path="/users" render={() => <UsersContainer/>}/>
                 <Route path="/settings" render={() => <Settings/>}/>
+                <Route path="/login" render={() => <Login/>}/>
+
             </section>
         </div>
     );

@@ -3,7 +3,6 @@ import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 import style from './Messages.module.css';
 
-
 const Messages = (props) => {
     let dialogsArray = props.dialogs.dialogs.map((dialogName) => (
         <DialogItem name={dialogName.name} id={dialogName.id} key={dialogName.id}/>
@@ -17,7 +16,6 @@ const Messages = (props) => {
         let body = e.target.value;
         props.updateNewMessageBody(body)
     };
-    debugger;
     return (
         <div className={style.dialogs}>
             <div className={style.dialogItems}>{dialogsArray}</div>
