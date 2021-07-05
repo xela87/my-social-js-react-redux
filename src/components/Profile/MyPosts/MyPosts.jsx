@@ -2,7 +2,7 @@ import React from 'react';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
-  const postsArray = props.posts.map((post) => <Post message={post.message} like={post.like} />);
+  const postsArray = props.posts.map((post) => <Post key={post.id} message={post.message} like={post.like} />);
   let textArea = React.createRef();
   const newButtonElement = React.createRef();
   const takePost = ()=> {

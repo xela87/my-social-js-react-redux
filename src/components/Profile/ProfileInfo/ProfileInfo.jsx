@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './ProfileInfo.module.css'
 import Preloader from "../../common/Proloader/Preloader";
+import ProfileStatus from "../ProfileStatus";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -8,8 +9,8 @@ const ProfileInfo = (props) => {
     }
   return (
     <div>
-      <img src="https://via.placeholder.com/1200x250?text=This+is+profile+background" alt="fon" />
       <div className={style.description}>
+          <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
           <img src={props.profile.photos.large} alt=''/>
           <p><strong>{props.profile.fullName}</strong></p>
           <p><strong>Про меня: </strong>{props.profile.aboutMe}</p>
