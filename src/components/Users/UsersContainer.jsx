@@ -2,15 +2,21 @@ import React from 'react';
 import Users from './Users';
 import {
     follow,
-    getUsers,
+    requestUsers,
     setCurrentPage,
     toggleIsFollowingProgress,
     unfollow,
 } from "../../redux/users-reducer";
 import {connect} from "react-redux";
 import Preloader from "../common/Proloader/Preloader";
-import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {
+    getPageSize,
+    getTotalUsersCount,
+    getCurrentPage,
+    getFetching,
+    getFollowingInProgress, getUsers
+} from "../../redux/usersSelectors";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -36,21 +42,30 @@ class UsersContainer extends React.Component {
     }
 }
 
+// const mapStateToProps = (state) => {
+//     return {
+//         users: state.usersPage.users,
+//         pageSize: state.usersPage.pageSize,
+//         totalUsersCount: state.usersPage.totalUsersCount,
+//         currentPage: state.usersPage.currentPage,
+//         isFetching: state.usersPage.isFetching,
+//         followingInProgress: state.usersPage.followingInProgress,
+//     }
+// }
+
 const mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress,
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getFetching(state),
+        followingInProgress: getFollowingInProgress(state),
     }
 }
 
 export default compose(
     connect(mapStateToProps, {
-        follow, unfollow, setCurrentPage, toggleIsFollowingProgress, getUsers
-    }),
-    withAuthRedirect
+        follow, unfollow, setCurrentPage, toggleIsFollowingProgress, getUsers: requestUsers
+    })
 )(UsersContainer)
-
