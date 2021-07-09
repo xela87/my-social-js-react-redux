@@ -1,0 +1,12 @@
+.currentPage {
+ cursor: pointer;
+}
+
+.selectedPage {
+    font-weight: bold;
+    color: gold;
+}
+
+.selectedPage:hover {
+    cursor: pointer;
+}
