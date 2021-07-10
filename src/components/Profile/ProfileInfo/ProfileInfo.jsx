@@ -2,18 +2,27 @@ import React from 'react';
 import style from './ProfileInfo.module.css'
 import Preloader from "../../common/Proloader/Preloader";
 import ProfileStatus from "../ProfileStatus";
+import userPhoto from "../../../assets/images/extra-large.jpg";
 
-const ProfileInfo = ({profile, status, updateStatus}) => {
+const ProfileInfo = ({savePhoto, profile, status, updateStatus, isOwner}) => {
     if (!profile) {
         return <Preloader/>
     }
+
+    const onMainPhotoSelected = (e) => {
+        if(e.target.files.length){
+            savePhoto(e.target.files[0])
+        }
+    }
+
     return (
         <div>
             <div className={style.description}>
-                <ProfileStatus status={status} updateStatus={updateStatus}/>
-                <img
-                    src={!profile.photos.large ? "https://secure.gravatar.com/avatar/16cbecb3875b11c8768a6447671636ff?s=200&d=mm&r=g" : profile.photos.large}
+                <img className="mainPhoto"
+                    src={profile.photos.large || userPhoto}
                     alt=''/>
+                <div>{isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}</div>
+                <ProfileStatus status={status} updateStatus={updateStatus}/>
                 <p><strong>{profile.fullName}</strong></p>
                 <p><strong>Про меня: </strong>{profile.aboutMe}</p>
                 <p><strong>Twitter: </strong>{profile.contacts.twitter}</p>
