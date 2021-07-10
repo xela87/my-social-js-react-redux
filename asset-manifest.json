@@ -1,31 +1,31 @@
 {
   "files": {
     "main.css": "/my-social-js-react-redux/static/css/main.a5456bb9.chunk.css",
-    "main.js": "/my-social-js-react-redux/static/js/main.385f903c.chunk.js",
-    "main.js.map": "/my-social-js-react-redux/static/js/main.385f903c.chunk.js.map",
-    "runtime-main.js": "/my-social-js-react-redux/static/js/runtime-main.fb6e56cd.js",
-    "runtime-main.js.map": "/my-social-js-react-redux/static/js/runtime-main.fb6e56cd.js.map",
-    "static/js/2.20e418c7.chunk.js": "/my-social-js-react-redux/static/js/2.20e418c7.chunk.js",
-    "static/js/2.20e418c7.chunk.js.map": "/my-social-js-react-redux/static/js/2.20e418c7.chunk.js.map",
+    "main.js": "/my-social-js-react-redux/static/js/main.b0f0e53e.chunk.js",
+    "main.js.map": "/my-social-js-react-redux/static/js/main.b0f0e53e.chunk.js.map",
+    "runtime-main.js": "/my-social-js-react-redux/static/js/runtime-main.914ab64f.js",
+    "runtime-main.js.map": "/my-social-js-react-redux/static/js/runtime-main.914ab64f.js.map",
+    "static/js/2.5f4d1483.chunk.js": "/my-social-js-react-redux/static/js/2.5f4d1483.chunk.js",
+    "static/js/2.5f4d1483.chunk.js.map": "/my-social-js-react-redux/static/js/2.5f4d1483.chunk.js.map",
     "static/css/3.a8752304.chunk.css": "/my-social-js-react-redux/static/css/3.a8752304.chunk.css",
-    "static/js/3.0e34c584.chunk.js": "/my-social-js-react-redux/static/js/3.0e34c584.chunk.js",
-    "static/js/3.0e34c584.chunk.js.map": "/my-social-js-react-redux/static/js/3.0e34c584.chunk.js.map",
+    "static/js/3.67e02be1.chunk.js": "/my-social-js-react-redux/static/js/3.67e02be1.chunk.js",
+    "static/js/3.67e02be1.chunk.js.map": "/my-social-js-react-redux/static/js/3.67e02be1.chunk.js.map",
     "static/css/4.a0f85774.chunk.css": "/my-social-js-react-redux/static/css/4.a0f85774.chunk.css",
-    "static/js/4.bb32b4e7.chunk.js": "/my-social-js-react-redux/static/js/4.bb32b4e7.chunk.js",
-    "static/js/4.bb32b4e7.chunk.js.map": "/my-social-js-react-redux/static/js/4.bb32b4e7.chunk.js.map",
+    "static/js/4.a457047c.chunk.js": "/my-social-js-react-redux/static/js/4.a457047c.chunk.js",
+    "static/js/4.a457047c.chunk.js.map": "/my-social-js-react-redux/static/js/4.a457047c.chunk.js.map",
     "static/js/5.12f0f530.chunk.js": "/my-social-js-react-redux/static/js/5.12f0f530.chunk.js",
     "static/js/5.12f0f530.chunk.js.map": "/my-social-js-react-redux/static/js/5.12f0f530.chunk.js.map",
     "index.html": "/my-social-js-react-redux/index.html",
     "static/css/3.a8752304.chunk.css.map": "/my-social-js-react-redux/static/css/3.a8752304.chunk.css.map",
     "static/css/4.a0f85774.chunk.css.map": "/my-social-js-react-redux/static/css/4.a0f85774.chunk.css.map",
     "static/css/main.a5456bb9.chunk.css.map": "/my-social-js-react-redux/static/css/main.a5456bb9.chunk.css.map",
-    "static/js/2.20e418c7.chunk.js.LICENSE.txt": "/my-social-js-react-redux/static/js/2.20e418c7.chunk.js.LICENSE.txt",
+    "static/js/2.5f4d1483.chunk.js.LICENSE.txt": "/my-social-js-react-redux/static/js/2.5f4d1483.chunk.js.LICENSE.txt",
     "static/media/loader2.83cbdda8.gif": "/my-social-js-react-redux/static/media/loader2.83cbdda8.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.fb6e56cd.js",
-    "static/js/2.20e418c7.chunk.js",
+    "static/js/runtime-main.914ab64f.js",
+    "static/js/2.5f4d1483.chunk.js",
     "static/css/main.a5456bb9.chunk.css",
-    "static/js/main.385f903c.chunk.js"
+    "static/js/main.b0f0e53e.chunk.js"
   ]
 }
