@@ -1,12 +1,10 @@
-.currentPage {
- cursor: pointer;
+.pageNumber {
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .selectedPage {
     font-weight: bold;
+    font-size: 24px;
     color: gold;
-}
-
-.selectedPage:hover {
-    cursor: pointer;
 }

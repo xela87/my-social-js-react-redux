@@ -11,8 +11,11 @@ const state = {
 };
 
 test('new post should be incremented', () => {
+    // 1. test data
     let actionAC = addPostActionCreator("Haven and hell")
+    // 2. action
     let newState = profileReducer(state, actionAC)
+    // 2. expectation
     expect(newState.posts.length).toBe(6)
 
 });

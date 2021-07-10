@@ -7,9 +7,10 @@ import User from "./User";
 let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, users, follow, unfollow, ...props}) => {
     return <div>
         <Pagination currentPage={currentPage}
-                    totalUsersCount={totalUsersCount}
+                    totalItemsCount={totalUsersCount}
                     pageSize={pageSize}
-                    onPageChanged={onPageChanged}/>
+                    onPageChanged={onPageChanged}
+                    portionSize={10}/>
         {users.map(user => <User key={user.id}
                                  user={user}
                                  follow={follow}
