@@ -5,6 +5,7 @@ import Pagination from "../common/Pagination/Pagination";
 import User from "./User";
 
 let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, users, follow, unfollow, ...props}) => {
+
     return <div>
         <Pagination currentPage={currentPage}
                     totalItemsCount={totalUsersCount}

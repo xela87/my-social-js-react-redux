@@ -3,10 +3,10 @@ import styles from "./User.module.css";
 import userPhoto from "../../assets/images/extra-large.jpg";
 import {NavLink} from "react-router-dom";
 
-let User = ({key, user, follow, unfollow, followingInProgress}) => {
+let User = ({user, follow, unfollow, followingInProgress}) => {
     return <div>
         <div><span>
-            <div><NavLink key={key} to={'/profile/' + user.id}><img className={styles.userPhoto} src={user.photos.small !== null ? user.photos.small : userPhoto} alt=''/></NavLink></div>
+            <div><NavLink key={user.id} to={'/profile/' + user.id}><img className={styles.userPhoto} src={user.photos.small !== null ? user.photos.small : userPhoto} alt=''/></NavLink></div>
         <div>
           {user.followed
               ? <button disabled={followingInProgress.some(id => id === user.id)}

@@ -1,3 +1,6 @@
+.paginator {
+    margin-left: 30px;
+}
 .pageNumber {
     cursor: pointer;
     font-size: 20px;

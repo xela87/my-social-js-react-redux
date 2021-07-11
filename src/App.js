@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {HashRouter, Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import News from './components/News/News';
 import Music from './components/Music/Music';
@@ -20,8 +20,15 @@ const UsersContainer = React.lazy(() => import('./components/Users/UsersContaine
 
 
 class App extends React.Component {
+    catchAllUnhandledErrors = (reason, promise) => {
+        alert(reason)
+    }
     componentDidMount() {
         this.props.initialiseApp();
+        window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
+    }
+    componentWillUnmount() {
+        window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors);
     }
 
     render() {
@@ -33,8 +40,10 @@ class App extends React.Component {
                 <HeaderContainer/>
                 <NavBar/>
                 <section className="content">
-                    <Route path="/profile/:userId?"
-                           render={() => <ProfileContainer/>}/>
+                    <Switch>
+                        <Route path="/profile/:userId?" render={() => <ProfileContainer/>}/>
+                        <Redirect exact from="/" to="/profile" />
+
                     <Route path="/messages"
                            render={withSuspense(MessagesContainer)}/>
                     <Route path="/news"
@@ -47,6 +56,8 @@ class App extends React.Component {
                            render={() => <Settings/>}/>
                     <Route path="/login"
                            render={() => <Login/>}/>
+                    <Route render={() => <div>404 PAGE NOT FOUND </div> } />
+                </Switch>
                 </section>
             </div>
         );
@@ -59,12 +70,12 @@ const mapStateToProps = (state) => ({
 
 let AppContainer = compose(withRouter, connect(mapStateToProps, {initialiseApp}))(App)
 
-const MainApp = (props) => {
-    return <HashRouter>
+const MainApp = () => {
+    return <BrowserRouter>
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-    </HashRouter>
+    </BrowserRouter>
 }
 
 export default MainApp;
