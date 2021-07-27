@@ -14,10 +14,9 @@ import {initialiseApp} from "./redux/app-reducer";
 import Preloader from "./components/common/Proloader/Preloader";
 import store from "./redux/redux-store";
 import {withSuspense} from "./hoc/withSuspence";
+import UsersContainer from "./components/Users/UsersContainer";
 
 const MessagesContainer = React.lazy(() => import('./components/Messages/MessagesContainer'));
-const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
-
 
 class App extends React.Component {
     catchAllUnhandledErrors = (reason, promise) => {
@@ -51,7 +50,7 @@ class App extends React.Component {
                     <Route path="/music"
                            render={() => <Music/>}/>
                     <Route path="/users"
-                           render={withSuspense(UsersContainer)}/>
+                           render={() => <UsersContainer title={"Users"} /> }/>
                     <Route path="/settings"
                            render={() => <Settings/>}/>
                     <Route path="/login"
